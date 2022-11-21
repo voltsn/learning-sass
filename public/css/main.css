@@ -23,6 +23,35 @@ main {
   height: 100vh;
 }
 
+.tag {
+  background-color: #e84d3f;
+  color: #fff;
+  padding: 0.5em 1em;
+}
+
+.tag--circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+.tag--circle .tag__text {
+  text-align: center;
+}
+
+.tag--top {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+
+.tag--bottom {
+  position: absolute;
+  bottom: -6px;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -31,13 +60,22 @@ main {
   width: 80%;
   border: 1px solid lightgray;
 }
+.card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.card:hover .card__text {
+  max-height: 200px;
+}
+.card:hover .card__header {
+  opacity: 0.6;
+  background-size: 140%;
+}
 
 .card__header {
   background-image: url("../images/india.jpg");
   background-repeat: no-repeat;
   background-position-y: top;
   background-size: 130%;
-  /*padding-top: 200px;*/
   position: relative;
   transition: opacity 500ms ease-in, background-size 500ms ease-in;
   flex-grow: 1;
@@ -73,46 +111,6 @@ main {
   gap: 1em;
   color: #686868;
   padding: 0 36px 36px;
-}
-
-.tag {
-  background-color: #e84d3f;
-  color: #fff;
-  padding: 0.5em 1em;
-}
-
-.tag--circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-}
-.tag--circle .tag__text {
-  text-align: center;
-}
-
-.tag--top {
-  position: absolute;
-  top: 30px;
-  right: 20px;
-}
-
-.tag--bottom {
-  position: absolute;
-  bottom: -6px;
-}
-
-.card:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-.card:hover .card__text {
-  max-height: 200px;
-}
-.card:hover .card__header {
-  opacity: 0.6;
-  background-size: 140%;
 }
 
 /*# sourceMappingURL=main.css.map */
